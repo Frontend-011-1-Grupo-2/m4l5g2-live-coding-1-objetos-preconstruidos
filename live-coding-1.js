@@ -149,13 +149,21 @@ console.log(texto.split(''));
 
 console.log(texto.split('').reverse().join(''));
 
-// Palabra es palíndromo?
+// Palabra es palíndromo? (se lee igual al derecho y al revés)
 let palabraEvaluar = 'palta';
 let esPalindromo =
   palabraEvaluar.split('').reverse().join('') === palabraEvaluar;
 console.log(esPalindromo);
 
 console.log(texto.split(','));
+
+let palabras = texto.split(' ');
+
+// Cada palabra comienza en mayúscula
+const nuevas = palabras.map((palabra) =>
+  palabra.split('')[0].toUpperCase().concat(palabra.slice(1)),
+);
+console.log('primera mayus', nuevas.join(' '));
 
 // concat() -> une dos o más cadenas
 console.log('\n--- concat() ---');
